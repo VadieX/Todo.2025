@@ -32,6 +32,10 @@ export class TodoComponent {
     targetEl.appendChild(footerEl);
     footerEl.appendChild(this.#inputEl);
     footerEl.appendChild(addButtonEl);
+
+    //Testowy element na potrzeby stylowania
+    this.addItem('Przykładowy element testowy');
+    this.addItem('Przykładowy element testowy 2');
   }
 
   addItem(extText?: string) {
@@ -120,7 +124,51 @@ export const TodoBoostrapTheme: TodoThemeSchema = {
   hidden: 'd-none'
 }
 
+export const TodoBulmaTheme: TodoThemeSchema = {
+  root: 'is-flex is-flex-direction-column has-background-dark',
+  list: 'is-flex is-flex-direction-column is-align-items-flex-start p-2 is-flex-grow-1',
+  list_item: 'box has-background-light w-100 elevated',
+  list_itemDone: 'has-background-grey-dark',
+  list_item_check: 'checkbox me-3',
+  list_item_text: 'has-text-black-bis mb-1',
+  list_item_textDone: 'has-text-grey-light',
+  list_item_textEditInput: 'input is-rounded mb-2',
+  list_item_deleteButton: 'button is-danger mr-2',
+  list_item_editButton: 'button is-warning',
+  footer: 'is-flex p-2',
+  footer_input: 'input is-rounded mr-2',
+  footer_addButton: 'button is-primary',
+  hidden: 'is-hidden'
+}
 
+export const TodoFoudationTheme: TodoThemeSchema = {
+
+}
+
+export const TodoMaterializeTheme: TodoThemeSchema = {
+  root: 'container',
+  
+
+
+  list_item_check: 'filled-in',
+}
+
+export const TodoTailwindTheme: TodoThemeSchema = {
+  root: 'flex flex-col !bg-gray-700',
+  list: 'p-2 flex-grow',
+  list_item: 'flex flex-row items-center bg-gray-300 p-2 rounded-lg shadow-md mb-3',
+  list_itemDone: 'bg-gray-500',
+  list_item_check: 'checkbox bg-gray-500 mr-3 text-amber-600',
+  list_item_text: 'text-neutral-950 flex-grow mr-3',
+  list_item_textDone: 'line-through',
+  list_item_textEditInput: 'input input-secondary mr-3 rounded-lg bg-gray-300 text-neutral-950 overflow-hidden resize-none text-left leading-[2rem] h-[2rem]',
+  list_item_deleteButton: 'btn btn-outline btn-error mr-2',
+  list_item_editButton: 'btn btn-outline btn-info',
+  footer: 'p-2 flex',
+  footer_input: 'input input-primary mr-2 rounded-lg bg-gray-300 text-neutral-950 overflow-hidden w-full resize-none text-left leading-[2rem] h-[2rem]',
+  footer_addButton: 'btn btn-primary',
+  hidden: 'hidden'
+}
 
 interface TodoOptions {
   theme: TodoThemeSchema

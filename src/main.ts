@@ -1,5 +1,9 @@
 import './css/app.css'
 // import './css/todo-default.css'
-import './css/bootstrap.scss'
+//import './css/bootstrap.scss'
+//import './css/bulma.scss'
+//import './css/foudation.scss'
+//import './css/materialize.scss'
+import './css/tailwind.css'
 import './app'
 
