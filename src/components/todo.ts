@@ -32,10 +32,6 @@ export class TodoComponent {
     targetEl.appendChild(footerEl);
     footerEl.appendChild(this.#inputEl);
     footerEl.appendChild(addButtonEl);
-
-    //Testowy element na potrzeby stylowania
-    this.addItem('Przykładowy element testowy');
-    this.addItem('Przykładowy element testowy 2');
   }
 
   addItem(extText?: string) {
@@ -110,7 +106,7 @@ function classUnify(classList: string) {
 export const TodoBoostrapTheme: TodoThemeSchema = {
   root: 'd-flex flex-column',
   list: 'list-group flex-grow-1 p-2',
-  list_item: 'list-group-item d-flex',
+  list_item: 'list-group-item d-flex mb-2',
   list_itemDone: '',
   list_item_check: 'form-check-input me-3',
   list_item_text: 'flex-grow-1 me-3',
@@ -127,7 +123,7 @@ export const TodoBoostrapTheme: TodoThemeSchema = {
 export const TodoBulmaTheme: TodoThemeSchema = {
   root: 'is-flex is-flex-direction-column has-background-dark',
   list: 'is-flex is-flex-direction-column is-align-items-flex-start p-2 is-flex-grow-1',
-  list_item: 'box has-background-light w-100 elevated',
+  list_item: 'box has-background-light w-100 elevated mb-2',
   list_itemDone: 'has-background-grey-dark',
   list_item_check: 'checkbox me-3',
   list_item_text: 'has-text-black-bis mb-1',
@@ -142,16 +138,25 @@ export const TodoBulmaTheme: TodoThemeSchema = {
 }
 
 export const TodoFoudationTheme: TodoThemeSchema = {
-
+  root: 'grid-container',
+  list: 'callout',
+  list_item: 'flex-container align-middle',
+  list_itemDone: '',
+  list_item_check: 'checkbox',
+  list_item_text: 'cell auto',
+  list_item_textDone: 'strike',
+  list_item_textEditInput: 'input',
+  list_item_deleteButton: 'button alert',
+  list_item_editButton: 'button warning',
+  footer: 'flex-container',
+  footer_input: 'input',
+  footer_addButton: 'button primary',
+  hidden: 'hide'
 }
 
-export const TodoMaterializeTheme: TodoThemeSchema = {
-  root: 'container',
-  
+// export const TodoMaterializeTheme: TodoThemeSchema = {
 
-
-  list_item_check: 'filled-in',
-}
+// }
 
 export const TodoTailwindTheme: TodoThemeSchema = {
   root: 'flex flex-col !bg-gray-700',

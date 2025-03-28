@@ -19,6 +19,21 @@ button {
   display: none;
 }
 
+#theme-select{ 
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 15%;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #000000;
+  font-size: 1rem;
+}
 /* app styles */
 #my-list {
   height: 100vh;
