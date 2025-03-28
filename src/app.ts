@@ -25,7 +25,7 @@ import {
     tailwind: './css/tailwind.css?inline'
   } as const;
   
-  const DEFAULT_THEME: ThemeKey = 'foundation';
+  const DEFAULT_THEME: ThemeKey = 'bootstrap';
   
   async function loadThemeStyles(theme: ThemeKey) {
     document.querySelectorAll('style[data-dynamic-style]').forEach((el) => el.remove());
